@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88bdc90f-d87a-470b-bae8-401e646ce20d" name="Default Changelist" comment="" />
+    <list default="true" id="88bdc90f-d87a-470b-bae8-401e646ce20d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/homepage.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -65,14 +69,52 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="352506687">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="35" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cypress/integration/navbar.spec.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="8" selection-start-column="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cypress/integration/homepage.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -95,6 +137,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -103,6 +148,7 @@
         <option value="$PROJECT_DIR$/cypress/integration/navbar_spec.js" />
         <option value="$PROJECT_DIR$/cypress.json" />
         <option value="$PROJECT_DIR$/cypress/integration/navbar.spec.js" />
+        <option value="$PROJECT_DIR$/cypress/integration/homepage.spec.js" />
       </list>
     </option>
   </component>
@@ -123,21 +169,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Landmark Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Landmark Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Cypress-Landmark-Practical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cypress-Landmark-Practical" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Landmark Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Landmark Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Cypress-Landmark-Practical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cypress-Landmark-Practical" type="462c0819:PsiDirectoryNode" />
               <item name="cypress" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Landmark Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Landmark Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Cypress-Landmark-Practical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cypress-Landmark-Practical" type="462c0819:PsiDirectoryNode" />
               <item name="cypress" type="462c0819:PsiDirectoryNode" />
               <item name="integration" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -145,7 +192,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,11 +227,12 @@
       <workItem from="1569582189078" duration="5087000" />
       <workItem from="1569587635778" duration="405000" />
       <workItem from="1569588131171" duration="3211000" />
+      <workItem from="1569603569436" duration="1200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10836000" />
+    <option name="totallyTimeSpent" value="12036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -218,17 +265,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cypress/integration/sample_spec.js" />
-    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar_spec.js" />
+    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar_spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -239,10 +281,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/navbar.spec.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/homepage.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
