@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88bdc90f-d87a-470b-bae8-401e646ce20d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/integration/homepage.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/homepage.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/navbar.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/navbar.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/screenshots/navbar.spec.js/Testing that the navigation bar buttons navigate to the correct sites -- Check Taster button (failed).png" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/screenshots/navbar.spec.js/Testing that the navigation bar buttons navigate to the correct sites -- Check Taster button (failed).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/screenshots/navbar.spec.js/Testing the account and BBC homepage buttons -- Checking the account page button (failed).png" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/screenshots/navbar.spec.js/Testing the account and BBC homepage buttons -- Checking the account page button (failed).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/videos/navbar.spec.js.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/videos/navbar.spec.js.mp4" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,12 +92,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2035" />
+          <entry key="js" value="3245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="2035" />
+          <entry key="JavaScript" value="3245" />
         </counts>
       </usages-collector>
     </session>
@@ -134,8 +135,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cypress/integration/homepage.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="289">
+              <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -250,12 +251,12 @@
       <workItem from="1569603569436" duration="1200000" />
       <workItem from="1569678376431" duration="1930000" />
       <workItem from="1569681471827" duration="595000" />
-      <workItem from="1569759580996" duration="7214000" />
+      <workItem from="1569759580996" duration="9946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21775000" />
+    <option name="totallyTimeSpent" value="24507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1935" height="1036" extended-state="0" />
@@ -306,8 +307,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cypress/integration/homepage.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="289">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
         </state>
       </provider>
     </entry>
