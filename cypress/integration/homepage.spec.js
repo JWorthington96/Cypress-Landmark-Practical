@@ -53,12 +53,12 @@ describe('Testing the slides for stories', function() {
 
         // getting and clicking the controls
         cy.get('@slides').within(() => {
-                cy.get('.hp-slider-controls__btn-next')
-                    // waiting to make sure the animation plays
-                    .click().wait(100)
-                    .click().wait(100)
-                    .click().wait(100)
-            });
+            cy.get('.hp-slider-controls__btn-next')
+                // waiting to make sure the animation plays
+                .click().wait(200)
+                .click().wait(200)
+                .click().wait(200)
+        });
 
         // checking that the slide buttons work and navigates to the expected link
         cy.get('[data-x-bbc-element-id="el-62"]')
@@ -84,9 +84,9 @@ describe('Testing the slides for stories', function() {
         // getting and clicking the controls
         cy.get('@slides').within(() => {
             cy.get('.hp-slider-controls__btn-next')
-                .click().wait(100)
-                .click().wait(100)
-                .click().wait(100)
+                .click().wait(200)
+                .click().wait(200)
+                .click().wait(200)
         });
 
         // checking that the slide buttons work and navigates to the expected link
