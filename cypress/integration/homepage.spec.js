@@ -21,3 +21,19 @@ describe.skip('Testing the homepage articles', function() {
     }
 });
 
+describe('Testing the slides for stories', function() {
+    it('Best of iPlayer slides', function() {
+        cy.visit('https://www.bbc.co.uk');
+
+        cy.get('.hp-tv-radio__title-text')
+            .contains('Best of BBC iPlayer TV')
+            // finding the div parent
+            .parent().parent().parent()
+            .within(() => {
+                cy.get('.hp-slider-controls__btn-next')
+                    .click()
+                    .click()
+                    .click()
+            })
+    })
+});
