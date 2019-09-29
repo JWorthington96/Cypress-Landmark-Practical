@@ -1,143 +1,75 @@
-describe('Testing that the navigation bar buttons navigate to the correct sites', function() {
+function returnToHome() {
     it('Navigating to BBC homepage', function() {
         // visiting BBC homepage
         cy.visit('https://www.bbc.co.uk');
     });
+}
 
-    it('Check the News button', function() {
+// for testing the navigation buttons
+function testNavButton(navName, pageName){
+    it('Check the ' + navName + ' button', function() {
         // finding the news navbar element
-        cy.get('.orb-nav-news')
-            .contains('News').click();
+        cy.get('.orb-nav-' + navName.toLowerCase())
+            .contains(navName).click();
         // checking it navigated to the right page
-        cy.url().should('include', '/news');
+        cy.url().should('include', '/' + pageName);
     });
+}
 
-    it('Check Sport button', function() {
-        // finding the sport navbar element
-        cy.get('.orb-nav-sport')
-            .contains('Sport').click();
-        // checking it navigated to the right page
-        cy.url().should('include', '/sport');
-    });
-
-    it('Check Weather button', function() {
-        // using this technique for the rest of the navigation bar
-        cy.get('.orb-nav-weather')
-            .contains('Weather').click();
-        cy.url().should('include', '/weather');
-    });
-
-    it('Check iPlayer button', function() {
-        cy.get('.orb-nav-iplayer')
-            .contains('iPlayer').click();
-        cy.url().should('include', '/iplayer');
-    });
-
-    it('Check Sounds button', function(){
-        cy.get('.orb-nav-sounds')
-            .contains('Sounds').click();
-        cy.url().should('include', '/sounds');
-    });
-
-    it('Check CBBC button', function() {
-        cy.get('.orb-nav-cbbc')
-            .contains('CBBC').click();
-        cy.url().should('include', '/cbbc');
-    });
-
-    it('Check More button', function() {
+// for testing the navigation buttons hidden under the 'More' tab
+function testNavMoreSection(navName, pageName){
+    it('Check ' + navName + ' button', function() {
+        // clicking on more button
+        cy.get('#orb-nav-more')
+            .contains('More').click();
         // returning to home page as the navigation bar changes on the CBBC section
-        cy.visit('https://www.bbc.co.uk');
+        cy.get('#orb-panel-more')
+            .contains(navName).click();
+        cy.url().should('include', '/' + pageName);
+    });
+}
+
+describe('Testing that the navigation bar buttons navigate to the correct sites', function() {
+    returnToHome();
+
+    testNavButton('News', 'news');
+    testNavButton('Sport', 'sport');
+    testNavButton('Weather', 'weather');
+    testNavButton('iPlayer', 'iplayer');
+    testNavButton('Sounds', 'sounds');
+    testNavButton('CBBC', 'cbbc');
+
+    // returning to home page as the navigation bar changes on the CBBC section
+    returnToHome();
+    it('Check More button', function() {
         // clicking on more button
         cy.get('#orb-nav-more')
             .contains('More').click();
         // checking the panel has expanded
         cy.get('.orb-panel')
             .invoke('css', 'display')
-            .should('not.equal', 'none')
-    });
-
-    it('Check CBeebies button', function() {
-        // returning to home page as the navigation bar changes on the CBBC section
-        cy.get('#orb-panel-more')
-            .contains('CBeebies').click();
-        cy.url().should('include', '/cbeebies');
-    });
-
-    it('Check Food button', function() {
-        // returning to homepage as the CBeebies page changes the navigation bar
-        cy.visit('https://www.bbc.co.uk');
-
+            .should('not.equal', 'none');
+        // closing it down again
         cy.get('#orb-nav-more')
             .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Food').click();
-        cy.url().should('include', '/food');
     });
 
-    it('Check Bitesize button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Bitesize').click();
-        cy.url().should('include', '/bitesize');
-    });
+    testNavMoreSection('CBeebies', 'cbeebies');
+    // returning to home page as the navigation bar changes on the CBeebies section
+    returnToHome();
 
-    it('Check Arts button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Arts').click();
-        cy.url().should('include', '/arts');
-    });
-
-    it('Check Taster button', function() {
-        // the Taster navigation button seems to be throwing some sort of error some of the time
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Taster').click();
-        cy.url().should('include', '/taster');
-    });
-
-    it('Check Local button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Local').click();
-        cy.url().should('include', '/news/localnews');
-    });
-
-    it('Check TV button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('TV').click();
-        cy.url().should('include', '/iplayer/guide');
-    });
-
-    it('Check Radio button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Radio').click();
-        cy.url().should('include', '/sounds');
-    });
-
-    it('Check Three button', function() {
-        cy.get('#orb-nav-more')
-            .contains('More').click();
-        cy.get('#orb-panel-more')
-            .contains('Three').click();
-        cy.url().should('include', '/bbcthree');
-    });
+    testNavMoreSection('Food', 'food');
+    testNavMoreSection('Bitesize', 'bitesize');
+    testNavMoreSection('Arts', 'arts');
+    testNavMoreSection('Taster', 'taster');
+    testNavMoreSection('Local', 'news/localnews');
+    testNavMoreSection('TV', 'iplayer/guide');
+    testNavMoreSection('Radio', 'sounds');
+    testNavMoreSection('Three', 'bbcthree');
 });
 
 describe('Testing the search bar functionality to find something on the site', function() {
-    it('Going to BBC homepage', function() {
-        // navigate to the bbc homepage
-        cy.visit('https://www.bbc.co.uk');
-    });
+    returnToHome();
 
     it('Checking that the search bar has the field value expected', function() {
         // find the search bar element and typing a search query
@@ -159,9 +91,7 @@ describe('Testing the search bar functionality to find something on the site', f
 });
 
 describe('Testing the account and BBC homepage buttons', function () {
-    it('Navigating to BBC homepage', function () {
-        cy.visit('https://www.bbc.co.uk')
-    });
+    returnToHome();
 
     it('Checking the account page button', function () {
         cy.get('#idcta-link').click();
